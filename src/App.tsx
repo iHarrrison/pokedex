@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 import axios from "axios";
-import {PokemonModel} from "./PokemonStore";
+import {PokemonModel, PokemonStore} from "./PokemonStore";
 
 const baseURL = "https://pokeapi.co/api/v2/pokemon/lanturn";
 
 function App() {
-  const [pokemon, setPokemon] = React.useState({sprites: {back_default: ""}});
+  const [pokemon, setPokemon] = PokemonStore.usePokemon();
   React.useEffect(() => {
     axios.get<PokemonModel>(baseURL).then((response) => {
       setPokemon(response.data);
