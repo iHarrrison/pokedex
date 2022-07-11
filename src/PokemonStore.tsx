@@ -1,4 +1,3 @@
-
 import React  from 'react';
 import {atom, useRecoilState} from "recoil";
 
@@ -14,13 +13,13 @@ type SpritesModel = {
 export type PokemonModel ={
     sprites: SpritesModel;
 }
-//Selector to come back to at a later date
+//TODO to come back to at a later date
 // export const getPokemon = selector<PokemonModel>({
 //     key: "currentPokemon",
 //     get:
 //         ({get} => {
 //             const currentPokemon = get(pokemonAtom);
-//             return curentPokemon?.back_default || "";
+//             return currentPokemon?.back_default || "";
 //         }}
 // })
 
